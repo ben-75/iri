@@ -1002,7 +1002,7 @@ public class API {
         if (res instanceof ErrorResponse) {
             exchange.setStatusCode(400); // bad request
         } else if (res instanceof AccessLimitedResponse) {
-            exchange.setStatusCode(401); // api method not allowed
+            exchange.setStatusCode(403); // api method not allowed
         } else if (res instanceof ExceptionResponse) {
             exchange.setStatusCode(500); // internal error
         }
